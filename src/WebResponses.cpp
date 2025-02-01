@@ -43,6 +43,9 @@
 #include "WebResponseImpl.h"
 #include "cbuf.h"
 
+
+namespace eth {
+
 /////////////////////////////////////////////////
 
 void* memchr(void* ptr, int ch, size_t count)
@@ -1305,3 +1308,4 @@ size_t AsyncResponseStream::write(uint8_t data)
 
 /////////////////////////////////////////////////
 
+}

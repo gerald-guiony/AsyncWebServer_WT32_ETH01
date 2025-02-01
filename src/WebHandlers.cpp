@@ -42,6 +42,8 @@
 
 #include "WebHandlerImpl.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 AsyncStaticWebHandler::AsyncStaticWebHandler(const char* uri, FS& fs, const char* path, const char* cache_control)
@@ -298,4 +300,6 @@ void AsyncStaticWebHandler::handleRequest(AsyncWebServerRequest *request)
   {
     request->send(404);
   }
+}
+
 }

@@ -41,6 +41,8 @@
 #include "Arduino.h"
 #include "AsyncEventSource.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 static String generateEventMessage(const char *message, const char *event, uint32_t id, uint32_t reconnect)
@@ -570,4 +572,6 @@ size_t AsyncEventSourceResponse::_ack(AsyncWebServerRequest *request, size_t len
   }
 
   return 0;
+}
+
 }

@@ -80,6 +80,8 @@
 
 #include <Print.h>
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 #if ARDUINOJSON_VERSION_MAJOR == 5
@@ -449,6 +451,8 @@ class AsyncCallbackJsonWebHandler: public AsyncWebHandler
       return _onRequest ? false : true;
     }
 };
+
+}
 
 #endif
 

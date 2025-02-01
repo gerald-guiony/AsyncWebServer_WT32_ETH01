@@ -45,6 +45,8 @@
 
 #include "AsyncWebServer_WT32_ETH01.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 // This is the ESP32 version of the Sync Lock, using the FreeRTOS Semaphore
@@ -127,5 +129,7 @@ class AsyncWebLockGuard
 };
 
 /////////////////////////////////////////////////
+
+}
 
 #endif // ASYNCWEBSYNCHRONIZATION_H_

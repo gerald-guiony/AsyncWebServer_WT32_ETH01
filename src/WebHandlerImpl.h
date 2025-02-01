@@ -52,6 +52,8 @@
 
 #include "AsyncWebServer_WT32_ETH01_Debug.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 class AsyncStaticWebHandler: public AsyncWebHandler
@@ -248,5 +250,7 @@ class AsyncCallbackWebHandler: public AsyncWebHandler
       return _onRequest ? false : true;
     }
 };
+
+}
 
 #endif /* ASYNCWEBSERVERHANDLERIMPL_H_ */

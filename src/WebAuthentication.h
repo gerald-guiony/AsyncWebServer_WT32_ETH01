@@ -45,6 +45,8 @@
 
 #include "AsyncWebServer_WT32_ETH01_Debug.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 bool checkBasicAuthentication(const char * header, const char * username, const char * password);
@@ -58,5 +60,7 @@ bool checkDigestAuthentication(const char * header, const char * method, const c
 String generateDigestHash(const char * username, const char * password, const char * realm);
 
 /////////////////////////////////////////////////
+
+}
 
 #endif    // WEB_AUTHENTICATION_H_

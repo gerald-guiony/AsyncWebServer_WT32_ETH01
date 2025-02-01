@@ -40,6 +40,8 @@
 
 #include "AsyncWebServer_WT32_ETH01.h"
 
+namespace eth {
+
 bool WT32_ETH01_eth_connected = false;
 
 /////////////////////////////////////////////////
@@ -171,4 +173,5 @@ void WT32_ETH01_event(WiFiEvent_t event)
   }
 }
 
+}
 

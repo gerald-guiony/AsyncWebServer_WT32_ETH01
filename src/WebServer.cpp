@@ -41,6 +41,8 @@
 #include "AsyncWebServer_WT32_ETH01.h"
 #include "WebHandlerImpl.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 bool ON_STA_FILTER(AsyncWebServerRequest *request)
@@ -319,4 +321,4 @@ void AsyncWebServer::reset()
 
 /////////////////////////////////////////////////
 
-
+}

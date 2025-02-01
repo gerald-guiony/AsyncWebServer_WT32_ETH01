@@ -43,7 +43,7 @@
 
 /////////////////////////////////////////////////
 
-#if ESP32
+#ifdef ESP32
 
   #if (_ASYNC_WEBSERVER_LOGLEVEL_ > 2 )
     #warning Using ESP32 architecture for WebServer_WT32_ETH01
@@ -147,6 +147,8 @@
   #define SHIELD_TYPE     "ETH_PHY_LAN8720"
 #endif
 
+namespace eth {
+
 extern bool WT32_ETH01_eth_connected;
 
 extern void WT32_ETH01_onEvent();
@@ -157,9 +159,13 @@ extern bool WT32_ETH01_isConnected();
 
 extern void WT32_ETH01_event(WiFiEvent_t event);
 
+}
+
 //////////////////////////////////////////////////////////////
 
 #include <AsyncTCP.h>
+
+namespace eth {
 
 #ifdef ASYNCWEBSERVER_REGEX
   #define ASYNCWEBSERVER_REGEX_ATTRIBUTE
@@ -932,6 +938,8 @@ class DefaultHeaders
       return instance;
     }
 };
+
+}
 
 /////////////////////////////////////////////////
 

@@ -44,6 +44,8 @@
 #include "mbedtls/md5.h"
 #include "mbedtls/version.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 // Basic Auth hash = base64("username:password")
@@ -107,16 +109,16 @@ static bool getMD5(uint8_t * data, uint16_t len, char * output)
 
   mbedtls_md5_init(&_ctx);
 
-#if (MBEDTLS_VERSION_NUMBER < 0x02070000)
+//#if (MBEDTLS_VERSION_NUMBER < 0x02070000)
   // Superseded from v2.7.0
   mbedtls_md5_starts(&_ctx);
   mbedtls_md5_update(&_ctx, data, len);
   mbedtls_md5_finish(&_ctx, _buf);
-#else
-  mbedtls_md5_starts_ret(&_ctx);
-  mbedtls_md5_update_ret(&_ctx, data, len);
-  mbedtls_md5_finish_ret(&_ctx, _buf);
-#endif
+// #else
+//   mbedtls_md5_starts_ret(&_ctx);
+//   mbedtls_md5_update_ret(&_ctx, data, len);
+//   mbedtls_md5_finish_ret(&_ctx, _buf);
+// #endif
 
   for (i = 0; i < 16; i++)
   {
@@ -364,4 +366,6 @@ bool checkDigestAuthentication(const char * header, const char * method, const c
   AWS_LOGINFO(F("AUTH FAIL: password"));
 
   return false;
+}
+
 }

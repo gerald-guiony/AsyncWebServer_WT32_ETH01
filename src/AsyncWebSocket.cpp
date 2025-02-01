@@ -46,11 +46,14 @@
 #include "Crypto/sha1.h"
 #include "Crypto/Hash.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 #define MAX_PRINTF_LEN 64
 
 /////////////////////////////////////////////////
+
 
 size_t webSocketSendFrameWindow(AsyncClient *client)
 {
@@ -1933,4 +1936,4 @@ size_t AsyncWebSocketResponse::_ack(AsyncWebServerRequest *request, size_t len, 
   return 0;
 }
 
-
+}

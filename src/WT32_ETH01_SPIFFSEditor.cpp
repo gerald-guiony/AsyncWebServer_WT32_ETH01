@@ -41,6 +41,8 @@
 #include "WT32_ETH01_SPIFFSEditor.h"
 #include <FS.h>
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 //File: edit.htm.gz, Size: 4151
@@ -693,4 +695,6 @@ void SPIFFSEditor::handleUpload(AsyncWebServerRequest *request, const String& fi
       request->_tempFile.close();
     }
   }
+}
+
 }

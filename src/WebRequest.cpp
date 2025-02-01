@@ -48,6 +48,8 @@
   #define os_strlen strlen
 #endif
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 static const String SharedEmptyString = String();
@@ -1755,6 +1757,8 @@ bool AsyncWebServerRequest::isExpectedRequestedConnType(RequestedConnectionType 
     res = true;
 
   return res;
+}
+
 }
 
 /////////////////////////////////////////////////

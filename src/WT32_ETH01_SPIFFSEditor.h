@@ -43,6 +43,8 @@
 
 #include "AsyncWebServer_WT32_ETH01.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 class SPIFFSEditor: public AsyncWebHandler
@@ -68,5 +70,7 @@ class SPIFFSEditor: public AsyncWebHandler
 };
 
 /////////////////////////////////////////////////
+
+}
 
 #endif    // SPIFFSEditor_H_

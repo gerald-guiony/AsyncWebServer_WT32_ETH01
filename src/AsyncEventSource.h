@@ -50,6 +50,8 @@
 
 #include "AsyncWebSynchronization.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 #define DEFAULT_MAX_SSE_CLIENTS 8
@@ -210,6 +212,8 @@ class AsyncEventSourceResponse: public AsyncWebServerResponse
 };
 
 /////////////////////////////////////////////////
+
+}
 
 #endif /* ASYNCEVENTSOURCE_H_ */
 

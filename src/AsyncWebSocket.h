@@ -56,6 +56,8 @@
 
 #include "AsyncWebSynchronization.h"
 
+namespace eth {
+
 /////////////////////////////////////////////////
 
 #define DEFAULT_MAX_WS_CLIENTS 8
@@ -614,5 +616,7 @@ class AsyncWebSocketResponse: public AsyncWebServerResponse
 };
 
 /////////////////////////////////////////////////
+
+}
 
 #endif /* ASYNCWEBSOCKET_H_ */

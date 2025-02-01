@@ -49,6 +49,12 @@
 
 #include <vector>
 
+/////////////////////////////////////////////////
+
+class cbuf;
+
+namespace eth {
+
 // It is possible to restore these defines, but one can use _min and _max instead. Or std::min, std::max.
 
 /////////////////////////////////////////////////
@@ -252,9 +258,6 @@ class AsyncProgmemResponse: public AsyncAbstractResponse
     virtual size_t _fillBuffer(uint8_t *buf, size_t maxLen) override;
 };
 
-/////////////////////////////////////////////////
-
-class cbuf;
 
 /////////////////////////////////////////////////
 
@@ -281,5 +284,7 @@ class AsyncResponseStream: public AsyncAbstractResponse, public Print
     size_t write(uint8_t data);
     using Print::write;
 };
+
+}
 
 #endif /* ASYNCWEBSERVERRESPONSEIMPL_H_ */
