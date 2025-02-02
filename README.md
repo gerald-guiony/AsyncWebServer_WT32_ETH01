@@ -5,7 +5,7 @@
 Forked version of the original [AsyncWebServer_WT32_ETH01](https://github.com/khoih-prog/AsyncWebServer_WT32_ETH01) library.
 This improved version allows it to be used with [ESP Async WebServer](https://github.com/me-no-dev/ESPAsyncWebServer) library in the same project.
 
-**Asynchonous WiFi and asynchronous Ethernet are now possible at the same time in your ESP32 WT32-ETH01 board !** :sunglasses:
+**Asynchonous WiFi + asynchronous Ethernet are now possible at the same time in your ESP32 WT32-ETH01 board !** :sunglasses:
 
 Check my source code example: [RelayRemoteControl](https://github.com/gerald-guiony/ESPWiFiServersExtension/tree/master/examples/RelayRemoteControl)
 
